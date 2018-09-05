@@ -15,11 +15,18 @@ export default class Index extends Component {
     this.state = {
       navTav: ['关注','推荐','热榜','视频'],
       currentNav: 0,
+      left: 0,
     }
   }
 
   tabs(index,e) {
-    console.log(index);
+    // 阻止事件冒泡
+    e.stopPropagation();
+    // 计算总宽度
+    let leftNum = (e.view.outerWidth / 4) * index;
+    this.setState({
+      left: leftNum
+    })
   }
 
   componentWillMount () { }
@@ -33,6 +40,9 @@ export default class Index extends Component {
   componentDidHide () { }
 
   render () {
+    const tabLeft = {
+      left: this.state.left
+    }
     return (
       <View className='index'>
         <View className='searchContent'>
@@ -51,6 +61,7 @@ export default class Index extends Component {
                 )
             })
           }
+          <View className='line' style={tabLeft}></View>
         </View>
       </View>
     )
