@@ -148,7 +148,6 @@ export default class Index extends Component {
                 good_num={item.good_num}
                 comment_num={item.comment_num}></List>
             })
-            
           }
           </View>
         </ScrollView>
