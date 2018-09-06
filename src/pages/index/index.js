@@ -85,7 +85,7 @@ export default class Index extends Component {
       Taro.hideLoading()
       if (resp.data.success) {
         this.setState({
-          listData: this.state.list.concat(resp.data.data),
+          listData: this.state.listData.concat(resp.data.data),
           loading: false
         })
       }
@@ -122,7 +122,6 @@ export default class Index extends Component {
 
     let listData = domFix(this.state.listData);
 
-    console.log(this.state.left, this.state.currentNav, "----------"); // 这个值干啥的？
     return (
       <View className='index'>
         <View className='title'>

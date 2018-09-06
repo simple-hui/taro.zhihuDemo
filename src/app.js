@@ -27,13 +27,25 @@ class App extends Component {
         selectedIconPath: "./asset/images/index_focus.png"
       },{
         pagePath: "pages/discovery/discovery",
-        text: "发现",
+        text: "想法",
         iconPath: "./asset/images/discovery.png",
         selectedIconPath: "./asset/images/discovery_focus.png"
       }, 
       {
         pagePath: "pages/more/more",
-        text: "我的",
+        text: "大学",
+        iconPath: "./asset/images/burger.png",
+        selectedIconPath: "./asset/images/burger_focus.png"
+      }, 
+      {
+        pagePath: "pages/more/more",
+        text: "消息",
+        iconPath: "./asset/images/burger.png",
+        selectedIconPath: "./asset/images/burger_focus.png"
+      }, 
+      {
+        pagePath: "pages/more/more",
+        text: "未登录",
         iconPath: "./asset/images/burger.png",
         selectedIconPath: "./asset/images/burger_focus.png"
       }]
