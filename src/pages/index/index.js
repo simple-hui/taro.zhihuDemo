@@ -8,6 +8,20 @@ import write from '../../asset/images/write.png'
 import List from '../../components/List/List.js';
 
 
+const domFix = (listData) => {
+  return listData.map((item,index)=>{
+    return <List 
+      key={index}
+      HeadImg={item.feed_source_img}
+      TitleName={item.feed_source_name}
+      title={item.question}
+      answer={item.answer_ctnt}
+      good_num={item.good_num}
+      comment_num={item.comment_num}></List>
+  })
+}
+
+
 export default class Index extends Component {
 
   config = {
@@ -31,8 +45,10 @@ export default class Index extends Component {
     // 计算总宽度
     let leftNum = (e.view.outerWidth / 4) * index;
     this.setState({
-      left: leftNum
+      left: leftNum,
+      currentNav: index
     })
+
   }
   // 上啦刷新
   getList = () => {
@@ -103,6 +119,10 @@ export default class Index extends Component {
     const tabLeft = {
       left: this.state.left
     }
+
+    let listData = domFix(this.state.listData);
+
+    console.log(this.state.left, this.state.currentNav, "----------"); // 这个值干啥的？
     return (
       <View className='index'>
         <View className='title'>
@@ -125,7 +145,8 @@ export default class Index extends Component {
             <View className='line' style={tabLeft}></View>
           </View>
         </View>
-        
+    
+
         <ScrollView
           scrollY
           scrollWithAnimation
@@ -138,16 +159,7 @@ export default class Index extends Component {
           onScrolltolower={this.moreList}>
           <View>
           {
-            this.state.listData.map((item,index)=>{
-              return <List 
-                key={index}
-                HeadImg={item.feed_source_img}
-                TitleName={item.feed_source_name}
-                title={item.question}
-                answer={item.answer_ctnt}
-                good_num={item.good_num}
-                comment_num={item.comment_num}></List>
-            })
+            this.state.currentNav === 0 ? listData : <View>123</View>
           }
           </View>
         </ScrollView>
