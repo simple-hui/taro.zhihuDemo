@@ -1,0 +1,30 @@
+.List {
+	padding: 20px; background: #fff; margin-bottom: 10px;
+	.person {
+		display: flex; align-items: center;
+		.headImg {
+			width: 60px; height: 60px; border-radius: 100%; overflow: hidden;
+			.taro-img {
+				width: 100%; height: 100%;
+			}
+		}
+		.titleName {
+			flex: 1; overflow: hidden; padding-left: 20px; font-size: 28px;
+		}
+		.more {
+			width: 60px;
+			.taro-img {
+				width: 100%; height: 100%;
+			}
+		}
+	}
+	.question {
+		overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 32px; font-weight: bold;
+	}
+	.answerContent {
+		height: 150px; overflow: hidden; display: -webkit-box; font-size: 30px; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+	}
+	.answerFooter {
+		font-size: 26px; color: #888;
+	}
+}

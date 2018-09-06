@@ -1,3 +1,13 @@
+.index {
+  padding-top: 150px;
+}
+.index .title {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
+}
 .index .searchContent {
   display: flex;
   height: 80px;
@@ -51,4 +61,8 @@
   bottom: 0;
   z-index: 1;
   transition: .5s all ease;
+}
+.index .scrollContent {
+  min-height: 1200px;
+  background-color: #F0F4F3;
 }

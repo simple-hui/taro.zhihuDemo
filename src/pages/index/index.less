@@ -1,4 +1,8 @@
 .index {
+	padding-top: 150px;
+	.title {
+		position: fixed; top: 0; width: 100%; background: #fff; z-index: 10;
+	}
 	.searchContent {
 		display: flex; height: 80px; padding: 10px 0 10px 10px; align-items: center; border-bottom: 1px solid rgb(231,231,231);
 		.searchForm {
@@ -22,5 +26,8 @@
 		.line {
 			width: 25%; border-bottom: 1px solid #000; position: absolute; bottom: 0; z-index: 1; transition: .5s all ease;
 		}
+	}
+	.scrollContent {
+		min-height: 1200px; background-color: #F0F4F3;
 	}
 }

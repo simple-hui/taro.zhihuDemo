@@ -1,0 +1,51 @@
+.List {
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+.List .person {
+  display: flex;
+  align-items: center;
+}
+.List .person .headImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.List .person .headImg .taro-img {
+  width: 100%;
+  height: 100%;
+}
+.List .person .titleName {
+  flex: 1;
+  overflow: hidden;
+  padding-left: 20px;
+  font-size: 28px;
+}
+.List .person .more {
+  width: 60px;
+}
+.List .person .more .taro-img {
+  width: 100%;
+  height: 100%;
+}
+.List .question {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 32px;
+  font-weight: bold;
+}
+.List .answerContent {
+  height: 150px;
+  overflow: hidden;
+  display: -webkit-box;
+  font-size: 30px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.List .answerFooter {
+  font-size: 26px;
+  color: #888;
+}
